@@ -39,14 +39,13 @@ fs.mkdir(pathProject, { recursive: true }, (err) => {
             fs.copyFile(path.join(__dirname, 'assets', folder, file),
               path.join(__dirname, 'project-dist', 'assets', folder, file), (err, file) => {
                 if (err) console.log(err);
-              })
+              }
+            )
           })
         });
       })
     });
   });
-
-
 });
 
 fs.readFile(path.join(__dirname, 'template.html'), 'UTF-8', (err, data) => {
@@ -89,7 +88,3 @@ fs.readdir(path.join(__dirname, 'styles'), (err, files) => {
     }
   })
 });
-
-function writefiles(data) {
-
-}
